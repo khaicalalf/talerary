@@ -15,6 +15,10 @@ dist-ssr
 #env
 .env
 
+#api
+src/api/talesApiCSV.ts
+TALES_API_GUIDE.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
