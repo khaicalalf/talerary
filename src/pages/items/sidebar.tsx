@@ -43,9 +43,9 @@ function Sidebar() {
   // ];
 
   const socialItems = [
-    { label: "Twitter", link: "https://twitter.com" },
-    { label: "GitHub", link: "https://github.com" },
-    { label: "LinkedIn", link: "https://linkedin.com" },
+    { label: "Twitter", link: "https://x.com/hatiyangraya" },
+    { label: "GitHub", link: "https://github.com/khaicalalf" },
+    { label: "LinkedIn", link: "https://www.linkedin.com/in/khaicalalfaris/" },
   ];
 
   const handleScrollToSection = (sectionId: string) => {
@@ -59,7 +59,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="text-white">
+    <div>
       <StaggeredMenu
         position="left"
         items={tales.map((tale) => ({

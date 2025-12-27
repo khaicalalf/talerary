@@ -18,7 +18,7 @@ function App() {
           className="hidden sm:block"
           style={{
             width: "100%",
-            height: "100vh",
+            height: "80vh",
             position: "absolute",
           }}
         >
@@ -36,9 +36,7 @@ function App() {
           />
         </div>
         <Hero />
-        <div className="w-full md:w-1/2 fixed z-50">
-          <Sidebar />
-        </div>
+        <Sidebar />
         <div className="pt-10 flex gap-8 min-h-screen justify-center items-center">
           <TalesExample />
         </div>

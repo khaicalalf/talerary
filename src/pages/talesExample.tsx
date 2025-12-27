@@ -35,12 +35,15 @@ export function TalesExample() {
   }
 
   return (
-    <div className="sticky top-30 flex flex-col justify-center items-center p-4 m-4 w-full text-white ">
+    <div
+      id="tales"
+      className="flex flex-col justify-center items-center p-4 w-full text-white "
+    >
       <div className="flex flex-col w-full md:w-1/2">
         {tales.slice(0, 16).map((tale) => (
           <>
             <div
-              className="p-8 rounded-lg w-full shadow shadow-md shadow-gray-800 my-4"
+              className="p-8 rounded rounded-lg w-full shadow shadow-md shadow-[#ff6b6bff]/40 my-4"
               style={{
                 height: "100%",
                 overflowY: "auto",

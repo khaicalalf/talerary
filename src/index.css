@@ -135,6 +135,10 @@
   display: none;
 }
 
+html {
+  background-color: #000;
+}
+
 html,
 body,
 .staggered-menu-panel {
@@ -145,4 +149,23 @@ body,
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+.title-font {
+  font-family: "Playfair Display", serif;
+  font-weight: 700; /* You can specify different weights */
+}
+
+@keyframes hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+.animate-arrow-down {
+  animation: hop 4s ease-in-out infinite;
 }
