@@ -1,18 +1,21 @@
-import { useState } from "react";
 import { TalesExample } from "./pages/talesExample";
+import { Hero } from "./pages/Hero";
 //import BlurExample from "./pages/blurExample";
 import "./index.css";
 import Sidebar from "./pages/items/sidebar";
 import LightRays from "./components/LightRays";
+import ScrollToTop from "./pages/items/scrollToTop";
+
 function App() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <>
       {/* <div className="flex flex-col min-h-screen justify-center items-center">
         <h1 className="text-3xl font-bold">Scroll Down to Reveal</h1>
       </div> */}
-      <div className="bg-gray-900 w-full relative">
+
+      <div className="bg-black w-full">
         <div
+          className="hidden sm:block"
           style={{
             width: "100%",
             height: "100vh",
@@ -21,7 +24,7 @@ function App() {
         >
           <LightRays
             raysOrigin="top-center"
-            raysColor="#ecffffff"
+            raysColor="#ff6b6bff"
             raysSpeed={1.5}
             lightSpread={0.8}
             rayLength={1.2}
@@ -32,14 +35,14 @@ function App() {
             className="custom-rays"
           />
         </div>
-        <div className="p-4 z-10 flex flex-col min-h-screen justify-center items-center">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
-            Toggle
-          </button>
-          {isOpen && <Sidebar />}
-          <TalesExample />
-          {/* <BlurExample /> */}
+        <Hero />
+        <div className="w-full md:w-1/2 fixed z-50">
+          <Sidebar />
         </div>
+        <div className="pt-10 flex gap-8 min-h-screen justify-center items-center">
+          <TalesExample />
+        </div>
+        <ScrollToTop />
       </div>
     </>
   );

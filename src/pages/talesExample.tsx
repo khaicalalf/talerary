@@ -35,10 +35,7 @@ export function TalesExample() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center p-4 m-4 w-full text-white z-10">
-      <h1 className="text-2xl font-bold mb-4">Grimm's Fairy Tales</h1>
-      <p className="mb-4">Total tales: {tales.length}</p>
-
+    <div className="sticky top-30 flex flex-col justify-center items-center p-4 m-4 w-full text-white ">
       <div className="flex flex-col w-full md:w-1/2">
         {tales.slice(0, 16).map((tale) => (
           <>
@@ -52,7 +49,7 @@ export function TalesExample() {
               <h2 className="text-xl text-white font-semibold ">
                 {tale.id + 1}. {tale.Title}
               </h2>
-              <div key={tale.id} className="m-4">
+              <div key={tale.id} id={`section-${tale.id}`} className="m-4">
                 <p>
                   <ScrollReveal
                     baseOpacity={0}

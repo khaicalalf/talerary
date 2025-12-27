@@ -137,7 +137,7 @@
 
 html,
 body,
-.product-overview {
+.staggered-menu-panel {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
