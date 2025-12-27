@@ -126,3 +126,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.scrollbar-gone {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-gone::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body,
+.product-overview {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

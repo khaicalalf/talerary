@@ -27,7 +27,7 @@ export function TalesExample() {
   }, []);
 
   if (loading) {
-    return <div className="p-4">Loading tales...</div>;
+    return <div className="p-4 text-white">Loading tales...</div>;
   }
 
   if (error) {
@@ -35,31 +35,30 @@ export function TalesExample() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center p-4">
+    <div className="flex flex-col justify-center items-center p-4 m-4 w-full text-white z-10">
       <h1 className="text-2xl font-bold mb-4">Grimm's Fairy Tales</h1>
       <p className="mb-4">Total tales: {tales.length}</p>
 
-      <div className="space-y-4 flex flex-col w-full md:w-1/2 p-4 m-4">
+      <div className="flex flex-col w-full md:w-1/2">
         {tales.slice(0, 16).map((tale) => (
           <>
             <div
-              className=" p-4 w-full shadow shadow-md shadow-gray-200"
+              className="p-8 rounded-lg w-full shadow shadow-md shadow-gray-800 my-4"
               style={{
                 height: "100%",
                 overflowY: "auto",
-                padding: "6rem 2rem",
               }}
             >
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl text-white font-semibold ">
                 {tale.id + 1}. {tale.Title}
               </h2>
-              <div key={tale.id} className="p-4 w-full ">
-                <p className="text-gray-700">
+              <div key={tale.id} className="m-4">
+                <p>
                   <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
                     baseRotation={0}
-                    blurStrength={5}
+                    blurStrength={20}
                   >
                     {tale.Text}
                   </ScrollReveal>

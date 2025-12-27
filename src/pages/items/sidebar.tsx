@@ -31,7 +31,7 @@ function Sidebar() {
   }
 
   return (
-    <div>
+    <div className="text-white">
       <h1>sidebar</h1>
       <ul>
         {tales.map((tale) => (
