@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchTalesFromExcel, type Tale } from "../api/talesApi";
 import ScrollReveal from "@/components/ScrollReveal";
+import TextType from "@/components/TextType";
 
 // Or use CSV version:
 // import { fetchTalesFromCSV as fetchTalesFromExcel, Tale } from '../api/talesApiCSV';
@@ -27,7 +28,23 @@ export function TalesExample() {
   }, []);
 
   if (loading) {
-    return <div className="p-4 text-white">Loading tales...</div>;
+    return (
+      <div className="p-4 text-white">
+        <TextType
+          text={[
+            "...",
+            "Grab The Fairy Ones",
+            "Collect The Fairy Tales",
+            "Read Grimm's Fairy Tales",
+          ]}
+          typingSpeed={75}
+          pauseDuration={1500}
+          showCursor={true}
+          cursorCharacter="|"
+          cursorClassName="text-[#ff6b6bff]"
+        />
+      </div>
+    );
   }
 
   if (error) {
