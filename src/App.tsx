@@ -1,5 +1,5 @@
 import { TalesExample } from "./pages/talesExample";
-import { Hero } from "./pages/Hero";
+import { Hero } from "./pages/hero";
 //import BlurExample from "./pages/blurExample";
 import "./index.css";
 import Sidebar from "./pages/items/sidebar";

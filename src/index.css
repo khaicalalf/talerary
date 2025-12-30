@@ -169,3 +169,16 @@ body::-webkit-scrollbar {
 .animate-arrow-down {
   animation: hop 4s ease-in-out infinite;
 }
+@keyframes hopItems {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-items {
+  animation: hopItems 4s ease-in-out infinite;
+}

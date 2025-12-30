@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchTalesFromExcel, type Tale } from "../api/talesApi";
 import ScrollReveal from "@/components/ScrollReveal";
 import TextType from "@/components/TextType";
+import BgItems from "./items/bgItems";
 
 // Or use CSV version:
 // import { fetchTalesFromCSV as fetchTalesFromExcel, Tale } from '../api/talesApiCSV';
@@ -86,6 +87,7 @@ export function TalesExample() {
           </>
         ))}
       </div>
+      <BgItems />
     </div>
   );
 }
