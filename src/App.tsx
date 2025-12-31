@@ -5,6 +5,7 @@ import "./index.css";
 import Sidebar from "./pages/items/sidebar";
 import LightRays from "./components/LightRays";
 import ScrollToTop from "./pages/items/scrollToTop";
+//import { StackExample } from "./pages/stackExample";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <h1 className="text-3xl font-bold">Scroll Down to Reveal</h1>
       </div> */}
 
-      <div className="bg-black w-full">
+      <div className="bg-white w-full">
         <div
           className="hidden sm:block"
           style={{
@@ -37,6 +38,7 @@ function App() {
         </div>
         <Hero />
         <Sidebar />
+        {/* <StackExample /> */}
         <div className="pt-10 flex gap-8 min-h-screen justify-center items-center">
           <TalesExample />
         </div>

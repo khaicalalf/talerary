@@ -49,6 +49,13 @@ export default function BgItems() {
               alt={`Items-${item.id}`}
               className="w-full h-full object-contain animate-items"
             />
+            <svg
+              xmlns={item.img}
+              className="h-24 w-24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="black"
+            ></svg>
           </div>
         ))}
     </>

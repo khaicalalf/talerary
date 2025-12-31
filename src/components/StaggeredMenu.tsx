@@ -606,7 +606,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
               {displaySocials && socialItems && socialItems.length > 0 && (
                 <div
-                  className="sticky bottom-[-4rem] bg-white p-8 h-40 w-full sm-socials mt-auto pt-8 flex flex-col gap-3 z-30"
+                  className="sticky bottom-[-4rem] bg-white border-[#ff0000] border-1 p-8 h-40 w-full sm-socials mt-auto pt-8 flex flex-col gap-3 z-30"
                   aria-label="Social links"
                 >
                   <h3 className="sm-socials-title m-0 text-base font-medium [color:var(--sm-accent,#ff0000)]">

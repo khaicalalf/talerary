@@ -141,7 +141,8 @@ html {
 
 html,
 body,
-.staggered-menu-panel {
+.staggered-menu-panel,
+.tales {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
