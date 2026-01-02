@@ -466,7 +466,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
         <button
           ref={toggleBtnRef}
-          className={`sm-toggle relative inline-flex items-center gap-[0.3rem] border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto p-2 bg-black ${
+          className={`sm-toggle relative inline-flex items-center gap-[0.3rem] border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto p-2 ${
             open ? "bg-black text-black" : "bg-black text-[#e9e9ef]"
           }`}
           aria-label={open ? "Close menu" : "Open menu"}

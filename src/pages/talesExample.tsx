@@ -56,7 +56,7 @@ export function TalesExample() {
   return (
     <div
       id="tales"
-      className="flex flex-col justify-center items-center p-4 w-full text-black "
+      className="flex flex-col justify-center items-center p-4 w-full bg-white text-black "
     >
       <div className="flex flex-col w-full md:w-1/2">
         {/* <AnimatedList
