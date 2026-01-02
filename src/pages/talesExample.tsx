@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchTalesFromExcel, type Tale } from "../api/talesApi";
 import TextType from "@/components/TextType";
 import BgItems from "./items/bgItems";
-import ScrollReveal from "@/components/ScrollReveal";
+//import ScrollReveal from "@/components/ScrollReveal";
 //import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 
 // Or use CSV version:
@@ -108,14 +108,15 @@ export function TalesExample() {
               </div>
               <div id={`section-${tale.id}`} className="px-8 pb-8">
                 <p>
-                  <ScrollReveal
+                  {/* <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
                     baseRotation={0}
                     blurStrength={20}
                   >
                     {tale.Text}
-                  </ScrollReveal>
+                  </ScrollReveal> */}
+                  {tale.Text}
                   {/* {tale.Text.substring(0, 100) + "..."} */}
                 </p>
               </div>
