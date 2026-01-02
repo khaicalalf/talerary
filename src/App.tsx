@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { useState, useEffect } from "react";
 import "./index.css";
 import SplashScreen from "./pages/items/SplashScreen";
-import { Hero } from "./pages/hero";
+import { Hero } from "./pages/heroSection";
 import { TalesExample } from "./pages/talesExample";
 
 // Lazy load components
