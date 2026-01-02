@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import a1 from "../../assets/items/1a.svg";
-import a2 from "../../assets/items/2a.svg";
-import a3 from "../../assets/items/3a.svg";
-import a4 from "../../assets/items/4a.svg";
-import a5 from "../../assets/items/5a.svg";
+import a1 from "../../assets/items/1c.svg";
+import a2 from "../../assets/items/2c.svg";
+import a3 from "../../assets/items/3c.svg";
+import a4 from "../../assets/items/4c.svg";
+import a5 from "../../assets/items/5c.svg";
 
 const bgItems = [
   { id: 1, img: a1, top: "10%", left: "5%" },
@@ -49,13 +49,6 @@ export default function BgItems() {
               alt={`Items-${item.id}`}
               className="w-full h-full object-contain animate-items"
             />
-            <svg
-              xmlns={item.img}
-              className="h-24 w-24"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="black"
-            ></svg>
           </div>
         ))}
     </>
