@@ -73,8 +73,9 @@ export function TalesExample() {
           displayScrollbar={true}
         /> */}
 
-          {tales.slice(0, 16).map((tale) => (
+          {tales.map((tale) => (
             <div
+              id={`section-${tale.id}`}
               key={tale.id}
               className="rounded rounded-lg w-full shadow shadow-md shadow-[#ff6b6bff]/40 my-4"
             >
@@ -112,7 +113,7 @@ export function TalesExample() {
                     {tale.id + 1}. {tale.Title}
                   </h2>
                 </div>
-                <div id={`section-${tale.id}`} className="px-8 pb-8">
+                <div className="px-8 pb-8">
                   <p>
                     {/* <ScrollReveal
                     baseOpacity={0}

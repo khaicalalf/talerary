@@ -49,12 +49,22 @@ function Sidebar() {
   ];
 
   const handleScrollToSection = (sectionId: string) => {
+    // Get the scrollable container
+    const container = document.getElementById("tales");
     const element = document.getElementById(sectionId);
-    if (element) {
-      const yOffset = -150; // Offset 100px dari atas agar judul section terlihat
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+
+    if (container && element) {
+      // Calculate the position relative to the container
+      const containerRect = container.getBoundingClientRect();
+      const elementRect = element.getBoundingClientRect();
+
+      // Calculate scroll position with offset
+      const yOffset = -20; // Small offset from top
+      const scrollPosition =
+        container.scrollTop + (elementRect.top - containerRect.top) + yOffset;
+
+      // Smooth scroll within the container
+      container.scrollTo({ top: scrollPosition, behavior: "smooth" });
     }
   };
 
