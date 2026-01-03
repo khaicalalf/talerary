@@ -25,7 +25,7 @@ export default function InfoItems() {
             isVisible ? "text-black" : "text-white"
           }`}
         >
-          Thanks for{" "}
+          Dev with{" "}
         </h1>
         <a
           href="https://reactbits.dev"
