@@ -19,7 +19,7 @@ export default function InfoItems() {
 
   return (
     <>
-      <div className="flex flex-row gap-2 fixed bottom-8 left-8 z-2 p-2 bg-white transition-colors duration-300 md:bg-transparent">
+      <div className="flex flex-row gap-2 fixed bottom-8 left-8 z-2 p-2  transition-colors duration-300 md:bg-transparent">
         <h1
           className={`text-md font-bold ${
             isVisible ? "text-black" : "text-white"

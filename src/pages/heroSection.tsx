@@ -4,7 +4,7 @@ export function Hero() {
   const handleScrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const yOffset = -150; // Offset 100px dari atas agar judul section terlihat
+      const yOffset = -10; // Offset 100px dari atas agar judul section terlihat
       const y =
         element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });

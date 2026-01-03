@@ -4,6 +4,7 @@ import "./index.css";
 import SplashScreen from "./pages/items/SplashScreen";
 import { Hero } from "./pages/heroSection";
 import { TalesExample } from "./pages/talesExample";
+//import BlurExample from "./pages/blurExample";
 
 // Lazy load components
 
@@ -66,8 +67,9 @@ function App() {
         )}
         <Hero />
         <Sidebar />
-        <div className="pt-10 flex gap-8 min-h-screen justify-center items-center">
+        <div className="flex gap-4 justify-center items-center">
           <TalesExample />
+          {/* <BlurExample /> */}
         </div>
         <ScrollToTop />
         <InfoItems />

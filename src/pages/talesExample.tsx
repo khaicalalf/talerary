@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchTalesFromExcel, type Tale } from "../api/talesApi";
 import TextType from "@/components/TextType";
 import BgItems from "./items/bgItems";
+import GradualBlur from "@/components/GradualBlur";
 //import ScrollReveal from "@/components/ScrollReveal";
 //import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 
@@ -54,12 +55,17 @@ export function TalesExample() {
   }
 
   return (
-    <div
-      id="tales"
-      className="flex flex-col justify-center items-center p-4 w-full bg-white text-black "
-    >
-      <div className="flex flex-col w-full md:w-1/2">
-        {/* <AnimatedList
+    <div className="flex flex-col justify-center items-center w-full bg-white text-black ">
+      <section
+        className="flex flex-col justify-center items-center p-4 w-full sm:w-1/2 bg-white text-black "
+        style={{ position: "relative", height: "100vh", overflow: "hidden" }}
+      >
+        <div
+          id="tales"
+          className="tales flex flex-col w-full"
+          style={{ height: "100%", overflowY: "auto" }}
+        >
+          {/* <AnimatedList
           items={tales}
           onItemSelect={(item, index) => console.log(item, index)}
           showGradients={true}
@@ -67,12 +73,12 @@ export function TalesExample() {
           displayScrollbar={true}
         /> */}
 
-        {tales.slice(0, 16).map((tale) => (
-          <div
-            key={tale.id}
-            className="rounded rounded-lg w-full shadow shadow-md shadow-[#ff6b6bff]/40 my-4"
-          >
-            {/* <ScrollStack
+          {tales.slice(0, 16).map((tale) => (
+            <div
+              key={tale.id}
+              className="rounded rounded-lg w-full shadow shadow-md shadow-[#ff6b6bff]/40 my-4"
+            >
+              {/* <ScrollStack
               itemDistance={0}
               itemStackDistance={2}
               rotationAmount={0}
@@ -100,15 +106,15 @@ export function TalesExample() {
                 </ScrollStackItem>
               </div>
             </ScrollStack> */}
-            <div>
-              <div className="sticky top-0 bg-white/95 backdrop-blur-md z-10 p-8 -mx-0 rounded-t-lg">
-                <h2 className="text-xl font-semibold">
-                  {tale.id + 1}. {tale.Title}
-                </h2>
-              </div>
-              <div id={`section-${tale.id}`} className="px-8 pb-8">
-                <p>
-                  {/* <ScrollReveal
+              <div>
+                <div className="sticky top-0 bg-white/95 backdrop-blur-md z-1 p-8 -mx-0 rounded-t-lg">
+                  <h2 className="text-xl font-semibold">
+                    {tale.id + 1}. {tale.Title}
+                  </h2>
+                </div>
+                <div id={`section-${tale.id}`} className="px-8 pb-8">
+                  <p>
+                    {/* <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
                     baseRotation={0}
@@ -116,14 +122,26 @@ export function TalesExample() {
                   >
                     {tale.Text}
                   </ScrollReveal> */}
-                  {tale.Text}
-                  {/* {tale.Text.substring(0, 100) + "..."} */}
-                </p>
+                    {tale.Text}
+                    {/* {tale.Text.substring(0, 100) + "..."} */}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+          <GradualBlur
+            target="parent"
+            position="bottom"
+            height="6rem"
+            strength={2}
+            divCount={5}
+            curve="bezier"
+            zIndex={2}
+            exponential={true}
+            opacity={1}
+          />
+        </div>
+      </section>
       <BgItems />
     </div>
   );

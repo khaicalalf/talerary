@@ -1,5 +1,5 @@
 import GradualBlur from "@/components/GradualBlur";
-import ScrollReveal from "@/components/ScrollReveal";
+//import ScrollReveal from "@/components/ScrollReveal";
 import { useEffect, useState } from "react";
 import { fetchTalesFromExcel, type Tale } from "../api/talesApi";
 
@@ -42,29 +42,37 @@ function BlurExample() {
           style={{ height: "100%", overflowY: "auto", padding: "6rem 2rem" }}
         >
           {/* <p>Haikal</p>
+          <div>
+          <p>Haikal div</p>
           <img
             src="https://plus.unsplash.com/premium_photo-1669839774770-df5a3d2da257?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Haikal"
             style={{ width: "100%", height: "auto" }}
           />
-          <p>Haikal</p> */}
-          {tales.slice(0, 16).map((tale) => (
+          </div>
+          <p>Haikal last</p> */}
+          {tales.map((tale) => (
             <>
-              <h2 className="text-xl font-semibold mb-2">
-                {tale.id + 1}. {tale.Title}
-              </h2>
-              <div key={tale.id} className="p-4 w-full ">
-                <p className="text-gray-700 whitespace-pre-wrap ">
-                  <ScrollReveal
+              <div>
+                <div className="sticky top-0 bg-white/95 backdrop-blur-md z-10 p-8 -mx-0 rounded-t-lg">
+                  <h2 className="text-xl font-semibold">
+                    {tale.id + 1}. {tale.Title}
+                  </h2>
+                </div>
+                <div id={`section-${tale.id}`} className="px-8 pb-8">
+                  <p>
+                    {/* <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
                     baseRotation={0}
-                    blurStrength={5}
+                    blurStrength={20}
                   >
                     {tale.Text}
-                  </ScrollReveal>
-                  {/* {tale.Text}.substring(0, 100) + "..."; line-clamp-3*/}
-                </p>
+                  </ScrollReveal> */}
+                    {tale.Text}
+                    {/* {tale.Text.substring(0, 100) + "..."} */}
+                  </p>
+                </div>
               </div>
             </>
           ))}
