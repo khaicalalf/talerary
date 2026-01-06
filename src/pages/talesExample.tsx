@@ -77,7 +77,7 @@ export function TalesExample() {
             <div
               id={`section-${tale.id}`}
               key={tale.id}
-              className="rounded rounded-lg w-full shadow shadow-md shadow-[#ff6b6bff]/40 my-4"
+              className="w-full my-4"
             >
               {/* <ScrollStack
               itemDistance={0}
