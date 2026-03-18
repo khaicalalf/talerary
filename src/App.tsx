@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./index.css";
 import SplashScreen from "./pages/items/SplashScreen";
 import { Hero } from "./pages/heroSection";
+import { VideoSection } from "./pages/videoSection";
 import { TalesExample } from "./pages/talesExample";
 //import BlurExample from "./pages/blurExample";
 
@@ -65,6 +66,7 @@ function App() {
             />
           </div>
         )}
+        <VideoSection />
         <Hero />
         <Sidebar />
         <div className="flex gap-4 justify-center items-center">
