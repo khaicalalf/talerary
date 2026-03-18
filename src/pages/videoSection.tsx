@@ -6,7 +6,7 @@ const VIDEO_URL =
 export function VideoSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
@@ -86,7 +86,7 @@ export function VideoSection() {
               title={isMuted ? "Unmute" : "Mute"}
             >
               <span className="material-symbols-outlined text-[18px]">
-                {isMuted ? "volume_off" : "volume_up"}
+                {isMuted ? "off" : "volume_up"}
               </span>
             </button>
           </div>
