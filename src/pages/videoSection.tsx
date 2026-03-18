@@ -5,8 +5,8 @@ const VIDEO_URL =
 
 export function VideoSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
@@ -63,7 +63,9 @@ export function VideoSection() {
           ref={videoRef}
           src={VIDEO_URL}
           className="w-full aspect-video object-cover"
-          onEnded={() => setIsPlaying(false)}
+          autoPlay
+          loop
+          muted
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
         />
